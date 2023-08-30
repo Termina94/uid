@@ -1,4 +1,4 @@
-{ pkgs , ...}:
+{ pkgs, ... }:
 
 pkgs.callPackage pkgs.rustPlatform.buildRustPackage {
     pname = "uid";
@@ -12,4 +12,4 @@ pkgs.callPackage pkgs.rustPlatform.buildRustPackage {
 
     nativeBuildInputs = [ pkgs.pkg-config ];
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
-};
+}
